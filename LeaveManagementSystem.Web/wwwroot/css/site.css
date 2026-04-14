@@ -18,12 +18,24 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    > .container {
+        flex: auto;
+    }
+}
+
+footer {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+    color: var(--bs-secondary-color);
+    text-align: end;
 }
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
