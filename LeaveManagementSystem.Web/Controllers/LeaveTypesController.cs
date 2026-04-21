@@ -1,10 +1,10 @@
 ﻿using LeaveManagementSystem.Web.Models.LeaveTypes;
 using LeaveManagementSystem.Web.Services;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace LeaveManagementSystem.Web.Controllers
 {
+    [Authorize(Roles = Roles.Administrator)] // you have to login as a Administrator to access this controller
     public class LeaveTypesController(ILeaveTypeService _leaveTypeService) : Controller
     {
         //// dependency injection of the database context to access the database
