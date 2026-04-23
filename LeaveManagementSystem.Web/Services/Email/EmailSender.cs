@@ -1,6 +1,6 @@
 ﻿using System.Net.Mail;
 
-namespace LeaveManagementSystem.Web.Services
+namespace LeaveManagementSystem.Web.Services.Email
 {
     // IConfiguration: access to configuration settings in appsettings.json
     // IEmailSender: default interface provided by ASP.NET Core Identity

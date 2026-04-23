@@ -8,8 +8,6 @@ namespace LeaveManagementSystem.Web.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base(options) { }
 
-        public DbSet<LeaveType> LeaveTypes { get; set; } // LeaveTypes: name of the table in db
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -64,5 +62,8 @@ namespace LeaveManagementSystem.Web.Data
                 });
         }
 
+        public DbSet<LeaveType> LeaveTypes { get; set; } // LeaveTypes: name of the table in db
+        public DbSet<LeaveAllocation> LeaveAllocations { get; set; }
+        public DbSet<Period> Periods { get; set; }
     }
 }
